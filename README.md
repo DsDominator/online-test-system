@@ -1,5 +1,5 @@
 # 1. Clone repository
-git clone https://github.com/<your-username>/online-test-system.git
+git clone https://github.com/DsDominator/online-test-system.git
 cd online-test-system
 
 # 2. Cài đặt dependencies
