@@ -22,9 +22,9 @@ php artisan key:generate
 # 6. Chạy migration và seed dữ liệu mẫu
 php artisan migrate --seed
 Seeder sẽ tạo:
-1 kỳ thi mẫu cùng 25 câu hỏi (20 trắc nghiệm, 5 tự luận).
+    1 kỳ thi mẫu cùng 25 câu hỏi (20 trắc nghiệm, 5 tự luận).
 # 7. Cách Test:
 php artisan test --filter=ExamFeatureTest
 Kết quả mong đợi:
-PASS  Tests\Feature\ExamFeatureTest
-✓ student can submit and mcq is auto graded and results saved
+    PASS  Tests\Feature\ExamFeatureTest
+    ✓ student can submit and mcq is auto graded and results saved
