@@ -11,8 +11,8 @@ class ResultController extends Controller
 {
     public function index(Request $request){
         $query = ExamResult::with(['user','exam'])->latest();
-        if($request->filled('exam_id')) $query->where('exam_id',$r->exam_id);
-        if($request->filled('user_id')) $query->where('user_id',$r->user_id);
+        if($request->filled('exam_id')) $query->where('exam_id',$request->exam_id);
+        if($request->filled('user_id')) $query->where('user_id',$request->user_id);
         $results = $query->paginate(20)->withQueryString();
         return view('admin.results.index', compact('results'));
     }
@@ -29,7 +29,7 @@ class ResultController extends Controller
     // Admin updates essay score for a single answer
     public function scoreAnswer(Request $request, Exam $exam, StudentAnswer $answer){
         $request->validate(['score' => 'required|numeric|min:0|max:100']);
-        $answer->update(['score'=>$r->score]);
+        $answer->update(['score'=>$request->score]);
         // Recalc total
         $total = StudentAnswer::where('user_id',$answer->user_id)
         ->where('exam_id',$exam->id)->sum('score');
