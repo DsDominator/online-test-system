@@ -28,6 +28,6 @@ Seeder sẽ tạo:
 
 # 7. Cách Test:
 php artisan test --filter=ExamFeatureTest    
-Kết quả mong đợi:
-    PASS  Tests\Feature\ExamFeatureTest
-    ✓ student can submit and mcq is auto graded and results saved
+Kết quả mong đợi:  
+PASS  Tests\Feature\ExamFeatureTest  
+✓ student can submit and mcq is auto graded and results saved
